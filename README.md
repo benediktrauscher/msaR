@@ -7,7 +7,7 @@ R CMD INSTALL msaR
 ```
 Or via [devtools](https://github.com/hadley/devtools)
 ```
-devtools::install_github('https://github.com/bene200/msaR.git')
+devtools::install_github('bene200/msaR')
 ```
 ## Usage
 ```{r}
