@@ -1,0 +1,11 @@
+# (uncomment to add a dependency)
+dependencies:
+ - name: "msa"
+   version: 1.0.2
+   src: htmlwidgets/lib/
+   script: msa.js
+   stylesheet: msa.css
+ - name: "biojs-io-fasta"
+   version: 0.1.12
+   src: htmlwidgets/lib/
+   script: biojs-io-fasta-0.1.12.js
