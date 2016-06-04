@@ -1,5 +1,5 @@
 # msaR
-The [BioJS MSA viewer](https://github.com/wilzbach/msa) wrapped into an R package
+The [BioJS MSA viewer](https://github.com/wilzbach/msa) wrapped into an R package using [htmlwidgets](https://github.com/ramnathv/htmlwidgets).
 ## Installation
 ```
 git clone https://github.com/bene200/msaR.git
