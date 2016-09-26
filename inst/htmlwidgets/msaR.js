@@ -35,11 +35,37 @@ HTMLWidgets.widget({
       m.addView("menu", defMenu);
     }
 
+    // save msa instance to window object so it can be hacked using shinyjs
+    if(x.features){
+      var features = {
+        config: {
+          type: "gff3"
+        },
+        seqs: {}
+      };
+
+      for(var i=0; i<x.features.length; i++){
+        if(features.seqs[x.features[i].seqName] === undefined || features.seqs[x.features[i].seqName] === null){
+          features.seqs[x.features[i].seqName] = [];
+        }
+        features.seqs[x.features[i].seqName].push({
+          attributes: {
+            Color: "#4285f4",
+            Name: "sgRNA"
+          },
+          end: x.features[i].end,
+          feature: "gene",
+          start: x.features[i].start
+        });
+      }
+
+      m.seqs.addFeatures(features);
+    }
+
     // call render at the end to display the whole MSA
     m.render();
 
-    // save msa instance to window object so it can be hacked using shinyjs
-    window.msaR = m;
+    return m;
   },
 
   resize: function(el, width, height, instance) {

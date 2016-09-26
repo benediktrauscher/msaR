@@ -5,8 +5,7 @@
 #' @import htmlwidgets
 #'
 #' @export
-msaR <- function(msaString, menu=T, config=NULL, width = NULL, height = NULL) {
-
+msaR <- function(msaString, menu=T, config=NULL, features=NULL, width = NULL, height = NULL) {
   # if no config options are given, init standard config
   if(is.null(config)){
     config <- list(
@@ -29,7 +28,8 @@ msaR <- function(msaString, menu=T, config=NULL, width = NULL, height = NULL) {
   x <- list(
     alignment=paste(readLines(msaString),collapse="\n"),
     config=config,
-    menu=menu
+    menu=menu,
+    features=features
   )
 
   # create widget
