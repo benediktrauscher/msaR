@@ -16,7 +16,7 @@ HTMLWidgets.widget({
   },
 
   renderValue: function(el, x, instance) {
-    var opts = x.config
+    var opts = x.config;
     opts.el = instance.el;
     opts.seqs = instance.parse(x.alignment);
 
@@ -38,6 +38,8 @@ HTMLWidgets.widget({
     // call render at the end to display the whole MSA
     m.render();
 
+    // save msa instance to window object so it can be hacked using shinyjs
+    window.msaR = m;
   },
 
   resize: function(el, width, height, instance) {
