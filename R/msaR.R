@@ -10,9 +10,9 @@ msaR <- function(msaString, menu=T, config=NULL, features=NULL, width = NULL, he
   if(is.null(config)){
     config <- list(
       vis=list(
-        conserv=F,
-        overviewbox=F,
-        seqlogo=T
+        conserv=T,
+        overviewbox=T,
+        seqlogo=F
       ),
       conf=list(
         dropImport=T

@@ -22,8 +22,7 @@ HTMLWidgets.widget({
 
     // init msa
     var m = instance.msa(opts);
-    m.g.colorscheme.addStaticScheme("own",{A: "orange", C: "red", G: "green", T: "blue"});
-    m.g.colorscheme.set("scheme", "own");
+    var test = m.g.colorscheme.set("scheme", "nucleotide");
 
     if(x.menu){
       // the menu is independent to the MSA container
@@ -64,8 +63,6 @@ HTMLWidgets.widget({
 
     // call render at the end to display the whole MSA
     m.render();
-
-    return m;
   },
 
   resize: function(el, width, height, instance) {
